@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        function computeGPA(grades){
+            let sum = 0;
+            
+            for(let i = 0; i < grades.length; i++){ 
+                let grade = grades[i];
+
+                if (grade == "A"){
+                    sum += 100;
+                }
+                else if(grade == "B"){
+                    sum += 80;
+                }
+                else if(grade == "C"){
+                    sum += 70;
+                }
+
+            }
+            
+            let gpa = sum / grades.length;
+
+            let result = '';
+            if (gpa == 100){
+                result = 'A';
+            }
+            else if (gpa >= 80 && gpa <= 99){
+                result = 'B';
+            }
+            else { 
+                result = 'C'
+            }
+            
+            console.log('Your result is ',result);
+            document.write('Your result is '+ result);
+        }  
+
+        let myGrades =["A","A","A","A","B","C","C","B","A"];
+        computeGPA(myGrades);
+    </script> 
+</head>
+<body>
+    
+</body>
+</html>
